@@ -236,8 +236,7 @@ Three Python scripts handle everything:
 1. **Read FINDINGS.md** — Explore the 5 investigation questions with full data
 2. **Run the project** — Follow the Quick Start above to see it in action
 3. **Examine the SQL models** — Understand the data transformation logic
-4. **Review AI_APPROACH.md** — See how this was built with AI assistance
-5. **Explore the code** — Dive into individual SQL models to learn the technique
+4. **Explore the code** — Dive into individual SQL models to learn the technique
 
 ---
 
