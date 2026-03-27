@@ -246,8 +246,6 @@ Three Python scripts handle everything:
 | Want to... | Go to... |
 |----------|----------|
 | See the findings | `FINDINGS.md` |
-| Learn the technical approach | `AI_APPROACH.md` |
-| Get step-by-step setup | `QUICKSTART.md` |
 | Understand architecture | This file! 👈 |
 
 ---
