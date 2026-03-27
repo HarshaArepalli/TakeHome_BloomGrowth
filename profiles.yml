@@ -1,0 +1,9 @@
+analytics_engineer_assessment:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'analytics.duckdb'
+      schema: main
+      threads: 4
+      timeout_seconds: 300

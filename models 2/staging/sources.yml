@@ -1,0 +1,95 @@
+version: 2
+
+sources:
+  - name: raw
+    description: Raw data from the SaaS product
+    tables:
+      - name: organizations
+        description: Customer organizations
+        columns:
+          - name: organization_id
+            description: Unique organization identifier
+          - name: organization_name
+            description: Name of the organization
+          - name: business_os_type
+            description: Business framework type (EOS, Pinnacle, Scaling Up, Custom)
+          - name: industry
+            description: Industry vertical
+          - name: employee_count
+            description: Number of employees
+          - name: status
+            description: Current status (active, churned, trial)
+          - name: created_at
+            description: Account creation date
+          - name: churned_at
+            description: Churn date if applicable
+
+      - name: plans
+        description: Pricing plans
+        columns:
+          - name: plan_id
+            description: Unique plan identifier
+          - name: plan_name
+            description: Name of the plan
+          - name: base_price
+            description: Base monthly price
+          - name: per_seat_price
+            description: Price per seat
+
+      - name: subscriptions
+        description: Subscription records including history
+        columns:
+          - name: subscription_id
+            description: Unique subscription identifier
+          - name: organization_id
+            description: Organization reference
+          - name: plan_id
+            description: Plan reference
+          - name: seats
+            description: Number of seats
+          - name: mrr_amount
+            description: Monthly recurring revenue
+          - name: billing_interval
+            description: Billing interval (monthly or annual)
+          - name: started_at
+            description: Subscription start date
+          - name: ended_at
+            description: Subscription end date if churned
+          - name: change_reason
+            description: Reason for subscription change
+
+      - name: users
+        description: User accounts
+        columns:
+          - name: user_id
+            description: Unique user identifier
+          - name: organization_id
+            description: Organization reference
+          - name: user_name
+            description: User name
+          - name: role
+            description: User role in organization
+          - name: is_registered
+            description: Whether user is registered
+          - name: created_at
+            description: User creation date
+          - name: last_active_at
+            description: Last activity date
+
+      - name: activity_events
+        description: Product usage events
+        columns:
+          - name: event_id
+            description: Unique event identifier
+          - name: organization_id
+            description: Organization reference
+          - name: user_id
+            description: User reference
+          - name: feature_category
+            description: Feature category
+          - name: event_type
+            description: Type of event
+          - name: event_date
+            description: Event date
+          - name: event_timestamp
+            description: Event timestamp

@@ -1,0 +1,138 @@
+================================================================================
+ANALYTICS ENGINEER TAKE-HOME ASSESSMENT - ANALYSIS FINDINGS
+================================================================================
+
+1. ACTIVITY LEVELS CORRELATION WITH MRR CHANGES
+--------------------------------------------------------------------------------
+
+Top 10 Active Organizations:
+   organization_name  current_mrr  total_events  active_users  net_mrr_change
+    Pacific Services        894.0           596            23           445.0
+  Broadleaf Partners        199.0           503            24             0.0
+        Horizon Corp        804.0           442            23             0.0
+  Broadleaf Systems         194.0           361            23             0.0
+       Basecamp Labs        199.0           316            24             0.0
+     Ironbridge Tech        144.0           303            18             0.0
+  Highland Solutions        149.0           284            10          -230.0
+    Highland Systems        849.0           280            24             0.0
+    Coastal Dynamics        849.0           268            24             0.0
+          Coastal Co        184.0           267            25             0.0
+
+
+Activity & MRR Correlation Summary:
+  - Total Organizations: 203
+  - High Activity Organizations (>100 events): 52
+  - High Activity with MRR Growth: 16
+  - % of High Activity with Growth: 30.77%
+
+
+2. EARLY WARNING SIGNS FOR CHURN RISK
+--------------------------------------------------------------------------------
+
+Top 15 Organizations at Churn Risk:
+     organization_name status  current_mrr  churn_risk_score risk_level  at_risk_user_count  dormant_user_count
+  Momentum Enterprises  trial          0.0                95   Critical                   0                   2
+       Bridge Partners  trial          0.0                95   Critical                   1                   2
+            Oakwood Co  trial          0.0                95   Critical                   1                   5
+         Prairie Works  trial          0.0                95   Critical                   1                  10
+           Momentum Co  trial          0.0                95   Critical                   3                  19
+     Catalyst Dynamics  trial          0.0                95   Critical                   1                   3
+       Brightpath Corp  trial          0.0                95   Critical                   1                   5
+  Skyward Enterprises   trial          0.0                95   Critical                   0                   6
+   Ironbridge Partners  trial          0.0                95   Critical                   0                   5
+   Elevate Consulting   trial          0.0                95   Critical                   0                   2
+    Riverstone Systems  trial          0.0                95   Critical                   0                   4
+     Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+ Silverline Consulting  trial          0.0                95   Critical                   2                  15
+        Northstar Corp active         64.0                80   Critical                   0                   2
+     Pioneer Solutions active         64.0                80   Critical                   1                   1
+
+Churn Risk Distribution:
+  - Critical Risk (70+): 77 organizations
+  - High Risk (50-69): 124 organizations
+  - Medium Risk (30-49): 2 organizations
+  - Already Churned: 33 organizations
+
+
+3. MOST VALUABLE CUSTOMER SEGMENTS
+--------------------------------------------------------------------------------
+
+Revenue by Business OS Type:
+business_os_type  org_count  avg_mrr  total_mrr  avg_events  avg_active_users  pct_active
+             EOS         76   278.25    21147.0      100.07              10.0        89.5
+          Custom         45   263.76    11869.0       79.98               8.0        80.0
+        Pinnacle         44   166.61     7331.0       76.89               9.0        77.3
+      Scaling Up         38   107.92     4101.0       64.29               7.0        50.0
+
+
+Revenue by Company Size:
+company_size  org_count  avg_mrr  total_mrr  pct_active
+      Medium        105   217.70    22858.0        82.9
+       Small         72   166.63    11997.0        66.7
+       Large         26   368.96     9593.0        84.6
+
+
+4. BUSINESS OS TYPE PERFORMANCE
+--------------------------------------------------------------------------------
+
+Business OS Type Performance Metrics:
+business_os_type  total_orgs  active_orgs  churned_orgs  churn_rate_pct  avg_mrr  avg_engagement  avg_health_score  avg_churn_risk
+             EOS          76           68             4             5.3   278.25           100.0              46.8            69.5
+          Custom          45           36             5            11.1   263.76            80.0              42.7            72.6
+        Pinnacle          44           34             8            18.2   166.61            77.0              38.1            73.9
+      Scaling Up          38           19            16            42.1   107.92            64.0              25.3            82.4
+
+
+5. ENGAGEMENT PATTERNS & PLAN UPGRADE ANALYSIS
+--------------------------------------------------------------------------------
+
+Top Organizations with Plan Upgrades:
+   organization_name  total_events  active_users  categories_used  expansion_count  net_mrr_change
+         Pulse Works           230            22                6                1           490.0
+    Pacific Services           596            23                5                1           445.0
+ Oakwood Enterprises            54            22                6                1           425.0
+ Pacific Enterprises           185            25                6                1           415.0
+     Archway Global             18            13                5                1           405.0
+Evergreen Industries            96            19                6                1           395.0
+   Stormlight Works            141            17                6                1           375.0
+  Clearview Dynamics           111            21                6                1           360.0
+           Alpine Co           113             7                5                1           355.0
+   Catalyst Ventures            92            22                5                1           355.0
+
+
+Upgrade Engagement Analysis:
+  - Total Organizations: 203
+  - Organizations with Upgrades: 39
+  - Percentage with Upgrades: 19.2%
+  - Avg Events (Upgraded Orgs): 106.0
+  - Avg Events (Non-Upgraded Orgs): 79.0
+
+
+Feature Category Usage:
+feature_category  orgs_using  total_users  total_events  avg_events_per_org
+           rocks         128        995.0        2966.0                23.0
+      scorecards         116        892.0        2897.0                25.0
+           todos         114        869.0        2886.0                25.0
+        meetings         121        922.0        2862.0                24.0
+          issues         119        885.0        2720.0                23.0
+       headlines         121        867.0        2699.0                22.0
+
+
+6. KEY METRICS SUMMARY
+--------------------------------------------------------------------------------
+
+Platform-wide Metrics:
+  - Total Organizations: 203
+  - Active Customers: 157
+  - Churned Customers: 33
+  - Trial Accounts: 13
+  - Total MRR: $44,448.00
+  - Avg MRR per Customer: $218.96
+  - Total Platform Events: 17,030
+  - Organizations with Users: 203
+  - Churn Rate: 16.3%
+  - Retention Rate: 77.3%
+
+================================================================================
+END OF FINDINGS
+================================================================================

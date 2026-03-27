@@ -1,0 +1,91 @@
+================================================================================
+ANALYTICS ENGINEER TAKE-HOME ASSESSMENT - ANALYSIS FINDINGS
+================================================================================
+
+1. ACTIVITY LEVELS CORRELATION WITH MRR CHANGES
+--------------------------------------------------------------------------------
+
+Top 10 Active Organizations:
+   organization_name  current_mrr  total_events  active_users  net_mrr_change
+    Pacific Services        894.0           596            23           445.0
+  Broadleaf Partners        199.0           503            24             0.0
+        Horizon Corp        804.0           442            23             0.0
+  Broadleaf Systems         194.0           361            23             0.0
+       Basecamp Labs        199.0           316            24             0.0
+     Ironbridge Tech        144.0           303            18             0.0
+  Highland Solutions        149.0           284            10          -230.0
+    Highland Systems        849.0           280            24             0.0
+    Coastal Dynamics        849.0           268            24             0.0
+          Coastal Co        184.0           267            25             0.0
+
+
+Activity & MRR Correlation Summary:
+  - Total Organizations: 203
+  - High Activity Organizations (>100 events): 52
+  - High Activity with MRR Growth: 16
+  - % of High Activity with Growth: 30.77%
+
+
+2. EARLY WARNING SIGNS FOR CHURN RISK
+--------------------------------------------------------------------------------
+
+Top 15 Organizations at Churn Risk:
+organization_name status  current_mrr  churn_risk_score risk_level  at_risk_user_count  dormant_user_count
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+Lakeside Ventures  trial          0.0                95   Critical                   1                   3
+       Oakwood Co  trial          0.0                95   Critical                   1                   5
+       Oakwood Co  trial          0.0                95   Critical                   1                   5
+       Oakwood Co  trial          0.0                95   Critical                   1                   5
+       Oakwood Co  trial          0.0                95   Critical                   1                   5
+       Oakwood Co  trial          0.0                95   Critical                   1                   5
+
+Churn Risk Distribution:
+  - Critical Risk (70+): 3097 organizations
+  - High Risk (50-69): 12007 organizations
+  - Medium Risk (30-49): 2 organizations
+  - Already Churned: 546 organizations
+
+
+3. MOST VALUABLE CUSTOMER SEGMENTS
+--------------------------------------------------------------------------------
+
+Revenue by Business OS Type:
+business_os_type  org_count  avg_mrr  total_mrr  avg_events  avg_active_users  pct_active
+             EOS         76   278.25    21147.0      100.07              10.0        89.5
+          Custom         45   263.76    11869.0       79.98               8.0        80.0
+        Pinnacle         44   166.61     7331.0       76.89               9.0        77.3
+      Scaling Up         38   107.92     4101.0       64.29               7.0        50.0
+
+
+Revenue by Company Size:
+company_size  org_count  avg_mrr  total_mrr  pct_active
+      Medium        105   217.70    22858.0        82.9
+       Small         72   166.63    11997.0        66.7
+       Large         26   368.96     9593.0        84.6
+
+
+4. BUSINESS OS TYPE PERFORMANCE
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/shivachaithanyagoli/Desktop/harsha_interview_assessment/generate_findings.py", line 145, in <module>
+    os_performance = conn.execute("""
+                     ~~~~~~~~~~~~^^^^
+    SELECT
+    ^^^^^^
+    ...<12 lines>...
+    ORDER BY avg_mrr DESC;
+    ^^^^^^^^^^^^^^^^^^^^^^
+    """).fetchdf()
+    ^^^^
+_duckdb.ParserException: Parser Error: syntax error at or near "do"
+
+LINE 12: FROM dim_organizations do
+                                ^
