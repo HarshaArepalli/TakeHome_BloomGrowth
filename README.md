@@ -100,8 +100,6 @@ results = conn.execute(
 📦 Project Root
 ├── 📄 README.md                          ← You are here!
 ├── 📄 FINDINGS.md                        ← 5 Key questions answered
-├── 📄 AI_APPROACH.md                     ← How this was built
-├── 📄 QUICKSTART.md                      ← Detailed setup guide
 │
 ├── ⚙️ Configuration Files
 │   ├── dbt_project.yml                   # dbt project config
